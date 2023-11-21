@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./Static/imgs/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <title>Trial 2</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="innercontainer">
+        <div class="grid">
+          <nav>
+            <img src="./Static/svg/logo.svg" />
+          </nav>
+          <div class="mobileImage">
+            <img src="./Static/imgs/hero-mobile.jpg" loading="lazy" />
+          </div>
+          <div class="mainText">
+            <h1>
+              <span class="colored">We're</span>
+              <span class="cl">coming</span>
+              <span class="cl">soon</span>
+            </h1>
+          </div>
+          <div class="mainDescription">
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <div class="email">
+            <form action="">
+              <input type="email" placeholder="Email address" id="email" />
+              <img
+                src="./Static/svg/icon-error.svg"
+                class="error"
+                loading="lazy"
+              />
+              <button type="submit">
+                <img src="./Static/svg/icon-arrow.svg" />
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="DesktopImage" loading="lazy">
+          <img src="./Static/imgs/hero-desktop.jpg" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const inputArea = document.getElementById("email");
+      const errorIcon = document.querySelector(".error");
+      const checker = inputArea.value.trim();
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        checkInput();
+      });
+
+      const confirm = () => {
+        inputArea.value = "";
+        console.log(checker);
+      };
+      const errors = () => {
+        errorIcon.classList.add("show");
+      };
+      function checkInput() {
+        const checking = checker === "" ? errors() : confirm();
+      }
+    </script>
+  </body>
+</html>

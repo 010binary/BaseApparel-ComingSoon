@@ -1,0 +1,133 @@
+@import './reset';
+
+
+.container {
+    background-color: white;
+    max-width: 1320px;
+    height: fit-content;
+    margin: 40px auto;
+
+    .innercontainer {
+        margin-left: 80px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    nav {
+        // border: 1px solid black;
+        max-width: 100%;
+        margin-bottom: 20px;
+
+        img {
+            padding: 50px;
+        }
+    }
+
+    .mobileImage {
+        display: none;
+    }
+
+    .mainText {
+        // border: 1px solid black;
+        max-width: 100%;
+        margin-top: 20px;
+
+        h1 {
+            font-size: 60px;
+            line-height: 1.3;
+            letter-spacing: 0.067em;
+            font-weight: 900;
+            width: 100%;
+            text-transform: uppercase;
+
+
+            span.colored {
+                color: $primary-color;
+            }
+
+            span.cl {
+                display: block;
+
+            }
+        }
+    }
+
+    .mainDescription {
+        // border: 1px solid black;
+        max-width: 100%;
+
+
+        p {
+            color: $primary-color;
+            font-family: $Font-Family;
+            font-weight: 600;
+            font-size: $Font-size;
+            line-height: 1.6;
+            letter-spacing: 1.113px;
+            text-align: justify;
+            margin-top: 50px;
+        }
+    }
+
+    .email {
+        // border: 1px solid black;
+        max-width: 100%;
+        display: grid;
+        place-content: center;
+        padding: 30px;
+        margin-top: 20px;
+
+        form {
+            border: 1.78px solid $primary-color;
+            border-radius: 30px;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+
+            .error{
+                position: absolute;
+                right: 32%;
+                top: 22%;
+                visibility: hidden;
+            }
+            .error.show{
+                visibility: visible;
+            }
+        }
+
+        input {
+            font-size: $Font-size;
+            width: 70%;
+            padding: 10px;
+            color: $primary-color;
+            float: left;
+            border: none;
+        }
+
+
+        button {
+            width: 30%;
+            padding: 11.8px;
+            float: left;
+            border: none;
+            overflow: hidden;
+            border-radius: 30px;
+            background: linear-gradient($Linear-gradient-2);
+        }
+
+    }
+}
+
+.grid {
+    grid-column: 1 / 1;
+}
+
+.DesktopImage {
+    grid-column: 2 / 2;
+    width: 100%;
+    height: 100%;
+}
+
+
+@import './moblie';
